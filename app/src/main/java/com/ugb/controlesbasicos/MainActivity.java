@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                                     resp = Math.cbrt(num1); //raiz cubica
                                 }
                             } else {
-                                tempVal.setText("Escribir 2 o 3");
+                                tempVal.setText("Escribir 2 o 3"); //mensaje para q escriba raiz cuadrada o cubica
                             }
                             break;
                     }
