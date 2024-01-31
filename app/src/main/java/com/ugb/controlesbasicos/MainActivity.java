@@ -2,13 +2,16 @@ package com.ugb.controlesbasicos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Notification;
 import android.os.Bundle;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     TextView tempVal;
@@ -70,15 +73,21 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case 6: //factorial
                             resp=1;
-                                for(int i=1; i<num1; i++){
+                                for(int i=1; i<=num1; i++){
                                     resp=resp*i;
                                 }
                             break;
                         case 7: //raiz
-                            if (num1==num1){
-                                resp = Math.sqrt(num1);
-                            } else if(num2==num2){
-                                resp = Math.sqrt(num2);
+                            if(num2==2){
+                                if (num1==num1){
+                                    resp = Math.sqrt(num1); //raiz cuadrada
+                                }
+                            } else if(num2==3){
+                                if (num1==num1){
+                                    resp = Math.cbrt(num1); //raiz cubica
+                                }
+                            } else {
+                                tempVal.setText("Escribir 2 o 3");
                             }
                             break;
                     }
